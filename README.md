@@ -1,6 +1,8 @@
 # future_bride
 
-A new Flutter project.
+Flutter Project with MVVM pattern
+
+include all things that bride needs it in her home
 
 ## Getting Started
 
