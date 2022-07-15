@@ -151,8 +151,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
 }
 
 class OnBoardingPage extends StatelessWidget {
-  final Slider sliderObj;
-  const OnBoardingPage(this.sliderObj, {Key? key}) : super(key: key);
+  SliderObject sliderObject;
+  OnBoardingPage(this.sliderObject, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -160,20 +160,20 @@ class OnBoardingPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Image(
-          image: AssetImage(sliderObj.image),
+          image: AssetImage(sliderObject.image),
           width: 150,
           height: 150,
         ),
         Padding(
           padding: const EdgeInsets.all(AppPadding.p8),
           child: Text(
-            sliderObj.title,
+            sliderObject.title,
             style: Theme.of(context).textTheme.headline1,
             textAlign: TextAlign.center,
           ),
         ),
         Text(
-          sliderObj.subTitle,
+          sliderObject.subTitle,
           style: Theme.of(context).textTheme.subtitle1,
           textAlign: TextAlign.center,
         )

@@ -59,13 +59,13 @@ class OnBoardinViewModel extends BaseViewModel
   Stream<SliderViewObject> get outPutSliderViewObject =>
       streamCon.stream.map((sliderViewObject) => sliderViewObject);
 // list of data slider
-  List<Slider> _gettsilder() => [
-        Slider(AppStrings.onBoardingTitle1, AppStrings.onBoardingsubTitle1,
-            AssetsName.onB1),
-        Slider(AppStrings.onBoardingTitle2, AppStrings.onBoardingsubTitle2,
-            AssetsName.onB2),
-        Slider(AppStrings.onBoardingTitle3, AppStrings.onBoardingsubTitle3,
-            AssetsName.onB3),
+  List<SliderObject> _gettsilder() => [
+        SliderObject(AppStrings.onBoardingTitle1,
+            AppStrings.onBoardingsubTitle1, AssetsName.onB1),
+        SliderObject(AppStrings.onBoardingTitle2,
+            AppStrings.onBoardingsubTitle2, AssetsName.onB2),
+        SliderObject(AppStrings.onBoardingTitle3,
+            AppStrings.onBoardingsubTitle3, AssetsName.onB3),
       ];
 // fun to send data and updata index
   void postDataToView() {
