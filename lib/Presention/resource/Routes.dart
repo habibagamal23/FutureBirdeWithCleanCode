@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:future_bride/Presention/Splash/splash_veiw.dart';
+import 'package:future_bride/app/di.dart';
 
 import '../Main_veiw/main_veiw.dart';
 import '../OnBoarding/OnBoarding_veiw.dart';
@@ -25,6 +26,7 @@ class RouteGeneratour {
       case Routes.onboardingRoute:
         return MaterialPageRoute(builder: (_) => const OnBoardingView());
       case Routes.loginRoute:
+        initLoginModule();
         return MaterialPageRoute(builder: (_) => const LoginView());
       case Routes.registerRoute:
         return MaterialPageRoute(builder: (_) => const RegisterView());

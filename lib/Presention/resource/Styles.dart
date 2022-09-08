@@ -3,16 +3,16 @@ import 'package:future_bride/Presention/resource/Font.dart';
 
 TextStyle _getTextStyle(double size, FontWeight fonttwight, Color color) {
   return TextStyle(
-      fontSize: size,
-      fontWeight: fonttwight,
-      color: color,
-      fontFamily: FontConstant.fontfmly);
+    fontSize: size,
+    fontWeight: fonttwight,
+    color: color,
+  );
 }
 
 // regular style
 
 TextStyle getRegularStyle(
-    {double fontSize = fontSize.s14, required Color color}) {
+    {double fontSize = fontSize.s10, required Color color}) {
   return _getTextStyle(fontSize, Fontweight.regular, color);
 }
 

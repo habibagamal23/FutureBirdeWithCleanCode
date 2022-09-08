@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:future_bride/Presention/resource/Color.dart';
 import 'package:future_bride/Presention/resource/Values.dart';
-import 'package:future_bride/domain/models.dart';
+import 'package:future_bride/domain/models/models.dart';
 import '../resource/Routes.dart';
 import '../resource/String.dart';
 import 'OnBoardingViewModel/Onboardung_ViewModel.dart';
@@ -92,9 +92,14 @@ class _OnBoardingViewState extends State<OnBoardingView> {
 
   Widget getCirclerWidight(int index, int curentidenx) {
     if (index == curentidenx) {
-      return const Icon(Icons.circle_outlined, color: ColorManger.basiccolor);
+      return const Icon(
+        Icons.circle_outlined,
+        color: ColorManger.basiccolor,
+        size: 20,
+      );
     } else {
-      return const Icon(Icons.circle_rounded, color: ColorManger.basiccolor);
+      return const Icon(Icons.circle_rounded,
+          color: ColorManger.basiccolor, size: 15);
     }
   }
 
@@ -110,7 +115,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               child: const SizedBox(
                 height: AppSize.s20,
                 width: AppSize.s20,
-                child: Icon(Icons.arrow_back_ios_new_outlined),
+                child: Icon(Icons.arrow_back_ios_new_outlined,
+                    color: ColorManger.basiccolor),
               ),
               onTap: () {
                 _controller.animateToPage(onBViewModel.getpreviseIndex(),
@@ -161,8 +167,8 @@ class OnBoardingPage extends StatelessWidget {
       children: [
         Image(
           image: AssetImage(sliderObject.image),
-          width: 150,
-          height: 150,
+          width: 200,
+          height: 300,
         ),
         Padding(
           padding: const EdgeInsets.all(AppPadding.p8),
@@ -174,7 +180,7 @@ class OnBoardingPage extends StatelessWidget {
         ),
         Text(
           sliderObject.subTitle,
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.bodyText1,
           textAlign: TextAlign.center,
         )
       ],

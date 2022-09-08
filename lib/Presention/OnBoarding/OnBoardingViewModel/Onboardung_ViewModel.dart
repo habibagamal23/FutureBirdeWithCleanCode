@@ -4,7 +4,7 @@ import 'dart:async';
 
 import 'package:future_bride/Presention/base/baseViewModel.dart';
 
-import '../../../domain/models.dart';
+import 'package:future_bride/domain/models/models.dart';
 import '../../resource/Assets.dart';
 import '../../resource/String.dart';
 import 'OnBoardinViewModelInPut.dart';
